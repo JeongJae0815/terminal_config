@@ -111,12 +111,12 @@ colorscheme jellybeans
 
 " vim-lsp (using clangd)
 " linux for clangd-9
-if executable('clangd-10')
+if executable('clangd-11')
     augroup lsp_clangd
         autocmd!
         autocmd User lsp_setup call lsp#register_server({
                     \ 'name': 'clangd',
-                    \ 'cmd': {server_info->['clangd-10']},
+                    \ 'cmd': {server_info->['clangd-11']},
                     \ 'whitelist': ['c', 'cpp','cxx','objc', 'objcpp','h','hxx'],
                     \ })
     augroup end
@@ -174,6 +174,7 @@ set nu "set line number on left side of terminal
 "set highlighting color
 "hi Search cterm=inverse
 if has('persistent_undo')
+	silent !mkdir ~/.vim_backup > /dev/null 2>&1
         set undodir=~/.vim/undodir "set dir to save undo result
         set undofile
 endif
