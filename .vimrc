@@ -174,7 +174,7 @@ set nu "set line number on left side of terminal
 "set highlighting color
 "hi Search cterm=inverse
 if has('persistent_undo')
-	silent !mkdir ~/.vim_backup > /dev/null 2>&1
+	silent !mkdir ~/.vim/undodir > /dev/null 2>&1
         set undodir=~/.vim/undodir "set dir to save undo result
         set undofile
 endif
