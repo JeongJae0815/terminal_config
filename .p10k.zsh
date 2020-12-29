@@ -177,7 +177,7 @@
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232
   typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=7
   # Custom icon.
-   typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=$'\uf308'
+  # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=$'\uf308'
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
@@ -872,10 +872,10 @@
 
   #typeset -g POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND=0
   # Context color in SSH without privileges.
-  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=3
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_FOREGROUND=255
   typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_BACKGROUND=0
   # Default context color (no privileges, no SSH).
-  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=3
+  typeset -g POWERLEVEL9K_CONTEXT_FOREGROUND=255
   typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND=0
 
   # Context format when running with privileges: user@hostname.
@@ -883,9 +883,9 @@
   #typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%n'
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='indocker'
   # Context format when in SSH without privileges: user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n'
   # Default context format (no privileges, no SSH): user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n@%m'
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
 
   # Don't show context unless running with privileges or in SSH.
   # Tip: Remove the next line to always show context.
